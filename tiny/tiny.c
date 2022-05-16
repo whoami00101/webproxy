@@ -239,7 +239,7 @@ void serve_dynamic(int fd, char *filename, char *cgiargs, char *method) {
   if (Fork() == 0) { /* Child */
     /* Real server would set all CGI vars here */
     setenv("QUERY_STRING", cgiargs, 1);  // 
-    // method를 cgi-bin/adder.c에 넘겨 주기 위해 환경변수 set -> 11.11
+    // method를 cgi-bin/adder.c에 넘겨 주기 위해 환경변수 set -> 11.11 문제
     setenv("REQUEST_METHOD", method, 1);
     // 클라이언트의 표준 출력을 CGI 프로그램의 표준 출력과 연결한다.
     // 이제 CGI 프로그램에서 printf하면 클라이언트에서 출력됨
