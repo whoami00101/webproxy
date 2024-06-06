@@ -23,7 +23,7 @@ int main(void) {
     // ex) http://13.209.73.157:8000/cgi-bin/adder?first=13&second=5
     sscanf(buf, "first=%d", &n1); // buf에서 %d를 읽어서 n1에 저장
     sscanf(p + 1, "second=%d", &n2); // p + 1은 second를 가리키게 됨.
-  }
+  };
 
   method = getenv("REQUEST_METHOD");
 
